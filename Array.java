@@ -45,11 +45,26 @@ public class ArrayOperations{
         return secondMinimum;
     }
 
+    public int[] reArrangeArray(int arr[]){
+        int n = arr.length;
+        int newArr[] = new int[n];
+        int index = 0;
+        for (int i = 0; i < n; i++){
+            if (arr[i] > 0){
+                newArr[index] = arr[i];
+                index++;
+            }
+        }
+        return newArr;
+    }
+
     public static void main(String args[]){
-        int arr[] = {100,13,24,122,44,19};
+        int arr[] = {0,1,0,4,1,2};
         
         ArrayOperations ao = new ArrayOperations();
-        int result = ao.findSecondMinimum(arr);
-        System.out.println(result);
+        int result[] = ao.reArrangeArray(arr);
+        for (int i = 0; i < result.length; i++){
+            System.out.print(result[i] + " ");
+        }
     }
 }
