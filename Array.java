@@ -1,21 +1,31 @@
-public class ArrayUtil{
+public class ArrayOperations{
 
-    public void printArray(int arr[]){
+    public int[] findEven(int arr[]){
         int n = arr.length;
-        for (int i = 0; i<n; i++){
-            arr[i] = i + 1;
-            System.out.print(arr[i] + " ");
+        int oddCount = 0;
+        for(int i = 0 ; i< n; i++){
+            if(arr[i] % 2 != 0){
+                oddCount++;    
+            }
+            
         }
-        System.out.println();
-    }
-
-    public void arrayDemo(){
-        int arr[] = new int[5];
-        printArray(arr);
+        int[] result = new int[oddCount];
+        int idx = 0;
+        for(int i = 0; i < n; i++){
+            if(arr[i] % 2 != 0){
+                result[idx] = arr[i];
+                idx++;
+            }
+        }
+        return result;
     }
 
     public static void main(String args[]){
-        ArrayUtil au = new ArrayUtil();
-        au.arrayDemo();
+        int arr[] = {1,2,3,4,5,6,7,8,9};
+        ArrayOperations ao = new ArrayOperations();
+        int evenArr[] = ao.findEven(arr);
+        for(int i = 0; i < evenArr.length; i++){
+            System.out.println(evenArr[i]);
+        }
     }
 }
