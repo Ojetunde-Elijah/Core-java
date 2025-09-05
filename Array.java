@@ -9,7 +9,7 @@ public class ArrayOperations{
         return reversed;
         
     }
-    public int[] reverseArray2(int arr[], start, end){
+    public int[] reverseArray2(int arr[],int start,int end){
         while (start < end){
             int temp = arr[start];
             arr[start] = arr[end];
@@ -17,15 +17,39 @@ public class ArrayOperations{
             start++;
             end--;  
         }
+        return arr;
+    }
+
+    public int findMinimum(int arr[]){
+        int min = arr[0];
+        for (int i = 1; i < arr.length; i++){
+            if (arr[i] < min){
+                min = arr[i];
+            }
+        }
+        return min;
+    }
+    public int findSecondMinimum(int arr[]){
+        int min = arr[0];
+        for (int i = 1; i < arr.length; i++){
+            if (arr[i] < min){
+                min = arr[i];
+            }
+        }
+        int secondMinimum = arr[0];
+        for (int i = 1; i < arr.length; i++){
+            if (arr[i] > min && arr[i] < arr[i-1]){
+                secondMinimum = arr[i];
+            }
+        }
+        return secondMinimum;
     }
 
     public static void main(String args[]){
-        int arr[] = {1,2,3,4,5,6,7,8,9};
+        int arr[] = {100,13,24,122,44,19};
         
         ArrayOperations ao = new ArrayOperations();
-        int result[] = ao.reverseArray(arr);
-        for(int i = 0; i < result.length; i++){
-            System.out.print(result[i] + " ");
-        }
+        int result = ao.findSecondMinimum(arr);
+        System.out.println(result);
     }
 }
