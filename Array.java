@@ -57,7 +57,18 @@ public class ArrayOperations{
         }
         return newArr;
     }
-
+    public boolean isPalindrome(String str){
+        Character arr[] = str.toCharArray();
+        int start = 0;
+        int end = arr.length - 1;
+        while (start < end){
+            if (arr[start] != arr[end]){
+                return false;
+            }
+            start++;
+            end--;
+        }
+    }
     public static void main(String args[]){
         int arr[] = {0,1,0,4,1,2};
         
