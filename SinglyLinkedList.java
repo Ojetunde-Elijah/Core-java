@@ -54,16 +54,25 @@ public class SinglyLinkedList{
             node.next = head;
             head = node;
         }else{
-            Listnode previous = head
+            ListNode previous = head;
             int count = 1;
             while(count < position - 1){
                 previous = previous.next;
-                count++
+                count++;
             }
             ListNode current = previous.next;
             node.next = current;
             previous.next = node;
         }
+    }
+    public ListNode deleteFirst(){
+        if(head == null){
+            return null;
+        }
+        ListNode temp = head;
+        head = head.next;
+        temp.next =null;
+        return null;
     }
     public static void main(String args[]){
         SinglyLinkedList sll = new SinglyLinkedList();
