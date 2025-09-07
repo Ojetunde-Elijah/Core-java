@@ -49,6 +49,20 @@ class Mobile
     int price;
     String network;
     static String name;
+
+    static{
+        name = "Phone";
+    }
+
+    public Mobile(){
+        brand = "";
+        price = 200;
+    }
+
+    public void show()
+    {
+        System.out.println();
+    }
 }
 
 public class Demo
@@ -60,10 +74,10 @@ public class Demo
         obj.price = 1500;
         obj.name = "SmartPhone";
 
-        Mobile obj1 = new Mobile();
-        obj.brand = "Samsung";
-        obj1.price = 1700;
-        obj1.name = "SmartPhone";
+        // Mobile obj1 = new Mobile();
+        // obj.brand = "Samsung";
+        // obj1.price = 1700;
+        // obj1.name = "SmartPhone";
         // StringBuffer sb =new StringBuffer("Elijah");
         // sb.append(" Ojetunde");
         // System.out.println(sb.capacity());
