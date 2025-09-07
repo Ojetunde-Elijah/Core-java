@@ -31,10 +31,39 @@ public class SinglyLinkedList{
         }
         return count;
     }
-    public void insert(int value){
+    public void insertBegining(int value){
         ListNode newHead = new ListNode(value);
         newHead.next = head;
         head = newHead;
+    }
+    public void insertEnd(int value){
+        ListNode newNode =new ListNode(value);
+        if(head == null){
+            head = newNode;
+            return;
+        }
+        ListNode current = head;
+        while (null != current.next){
+            current = current.next;
+        }
+        current.next = newNode;
+    }
+    public void insertAnywhere(int value,int position){
+        ListNode node = new ListNode(value);
+        if(position == 1){
+            node.next = head;
+            head = node;
+        }else{
+            Listnode previous = head
+            int count = 1;
+            while(count < position - 1){
+                previous = previous.next;
+                count++
+            }
+            ListNode current = previous.next;
+            node.next = current;
+            previous.next = node;
+        }
     }
     public static void main(String args[]){
         SinglyLinkedList sll = new SinglyLinkedList();
@@ -46,9 +75,10 @@ public class SinglyLinkedList{
         sll.head.next = second;
         second.next = third;
         third.next = fourth;
-        sll.insert(5);
-
+        sll.insertBegining(5);
+        sll.insertEnd(100);
         sll.display();
+        
         //  System.out.println(sll.lengthOfSinglyLinked());
     }
 }
