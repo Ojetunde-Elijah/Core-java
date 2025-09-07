@@ -72,7 +72,31 @@ public class SinglyLinkedList{
         ListNode temp = head;
         head = head.next;
         temp.next =null;
-        return null;
+        return temp;
+    }
+    public ListNode deleteLast(){
+        if(head == null){
+            return null;
+        }
+        ListNode current = head;
+        ListNode prevous = null;
+        while(current.next != null){
+            previous = current
+            current = current.next;
+
+        }
+        previous.next = null;
+        
+    }
+    public ListNode deleteAnywhere(){
+        if(head == null){
+            return null;
+        }
+        ListNode temp = head;
+        head = head.next;
+        temp.next = null;
+        return temp;
+        
     }
     public static void main(String args[]){
         SinglyLinkedList sll = new SinglyLinkedList();
