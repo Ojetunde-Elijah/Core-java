@@ -36,34 +36,55 @@
 // }
 
 
-class Student
+// class Student
+// {
+//     int rollno;
+//     String name;
+//     int marks;
+// }
+
+class Mobile
 {
-    int rollno;
-    String name;
-    int marks;
+    String brand;
+    int price;
+    String network;
+    static String name;
 }
 
 public class Demo
 {
     public static void main(String a[])
     {
-        Student s1 = new Student();
-        s1.rollno = 1;
-        s1.name = "Ojetunde Elijah";
-        s1.marks = 100;
+        Mobile obj = new Mobile();
+        obj.brand = "Apple";
+        obj.price = 1500;
+        obj.name = "SmartPhone";
 
-        Student s2 = new Student();
-        s2.rollno = 2;
-        s2.name = "Ojetunde Esther";
-        s2.marks = 98;
+        Mobile obj1 = new Mobile();
+        obj.brand = "Samsung";
+        obj1.price = 1700;
+        obj1.name = "SmartPhone";
+        // StringBuffer sb =new StringBuffer("Elijah");
+        // sb.append(" Ojetunde");
+        // System.out.println(sb.capacity());
+        // System.out.println(sb);
+        // Student s1 = new Student();
+        // s1.rollno = 1;
+        // s1.name = "Ojetunde Elijah";
+        // s1.marks = 100;
 
-        Student s3 = new Student();
-        s3.rollno = 3;
-        s3.name = "Ojetunde Miracle";
-        s3.marks = 99;
+        // Student s2 = new Student();
+        // s2.rollno = 2;
+        // s2.name = "Ojetunde Esther";
+        // s2.marks = 98;
 
-        Student students[] = new Student[3];
-        // int nums[] = new int[4];
+        // Student s3 = new Student();
+        // s3.rollno = 3;
+        // s3.name = "Ojetunde Miracle";
+        // s3.marks = 99;
+
+        // Student students[] = new Student[3];
+        // // int nums[] = new int[4];
         // nums[0] = 4;
         // nums[1] = 8;
         // nums[2] = 3;
