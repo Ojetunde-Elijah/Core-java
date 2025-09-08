@@ -64,35 +64,41 @@
 //         System.out.println();
 //     }
 // }
-class Human
-{
-    private int age;
-    private String name;
+// class Human
+// {
+//     private int age;
+//     private String name;
 
-    public int getAge(){
-        return age;
-    }
+//     public Human(){
 
-    public void setAge(int a){
-        age = a;
-    }
+//     }
 
-    public String getName(){
-        return name;
-    }
+//     public int getAge(){
+//         return age;
+//     }
 
-    public void setName(String n2){
-        name = n;
-    }
-}
+//     public void setAge(int a){
+//         age = a;
+//     }
+
+//     public String getName(){
+//         return name;
+//     }
+
+//     public void setName(String n2){
+//         name = n;
+//     }
+// }
+
 
 public class Demo
 {
     public static void main(String a[])
     {
-        Human obj = new Human();
-        obj.age = 11;
-        obj.name = "Navin";
+        Calc obj = new Calc();
+        // Human obj = new Human();
+        // obj.age = 11;
+        // obj.name = "Navin";
 
         // Mobile obj = new Mobile();
         // obj.brand = "Apple";
