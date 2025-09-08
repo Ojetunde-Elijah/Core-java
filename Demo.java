@@ -95,49 +95,27 @@ public class Demo
 {
     public static void main(String a[])
     {
-        Calc obj = new Calc();
-        // Human obj = new Human();
-        // obj.age = 11;
-        // obj.name = "Navin";
+        B obj = new B(2);
+    }
+}
 
-        // Mobile obj = new Mobile();
-        // obj.brand = "Apple";
-        // obj.price = 1500;
-        // obj.name = "SmartPhone";
+class A
+{
+    public A(){
+        System.out.println("in A");
+    }
+    public A(int n){
+        System.out.println("in A int");
+    }
+}
 
-        // Mobile obj1 = new Mobile();
-        // obj.brand = "Samsung";
-        // obj1.price = 1700;
-        // obj1.name = "SmartPhone";
-        // StringBuffer sb =new StringBuffer("Elijah");
-        // sb.append(" Ojetunde");
-        // System.out.println(sb.capacity());
-        // System.out.println(sb);
-        // Student s1 = new Student();
-        // s1.rollno = 1;
-        // s1.name = "Ojetunde Elijah";
-        // s1.marks = 100;
-
-        // Student s2 = new Student();
-        // s2.rollno = 2;
-        // s2.name = "Ojetunde Esther";
-        // s2.marks = 98;
-
-        // Student s3 = new Student();
-        // s3.rollno = 3;
-        // s3.name = "Ojetunde Miracle";
-        // s3.marks = 99;
-
-        // Student students[] = new Student[3];
-        // // int nums[] = new int[4];
-        // nums[0] = 4;
-        // nums[1] = 8;
-        // nums[2] = 3;
-        // nums[3] = 9;
-
-        // for(int i = 0; i< nums.length;i++)
-        // {
-        //     System.out.println(nums[i]);
-        // }
+class B extends A
+{
+    public B(){
+        System.out.println("in B");
+    }
+    public B(int n){
+        super(2);
+        System.out.println("in B int");
     }
 }
