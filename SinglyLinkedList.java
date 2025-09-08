@@ -106,11 +106,33 @@ public class SinglyLinkedList{
             ListNode current = previous.next;
             previous.next = current.next;
             current = null
-        }
-
-        
+        } 
         
     }
+
+    public boolean elementSearch(int searchKey){
+        ListNode current = head;
+        while(current != null){
+            if(current.data == searchKey){
+                return true;
+            }
+            current = current.next;
+        }
+        return false;
+    }
+    public ListNode reverseLinkedList(){
+        ListNode current = head;
+        ListNode previous = null;
+        Listnode next = null;
+        while(current != null){
+            next = current.next;
+            current.next = previous;
+            previous = current;
+            current = next;
+        }
+        return previous;
+    }
+
     public static void main(String args[]){
         SinglyLinkedList sll = new SinglyLinkedList();
         sll.head = new ListNode(10);
