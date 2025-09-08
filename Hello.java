@@ -43,25 +43,46 @@
 //     int marks;
 // }
 
-class Mobile
+// class Mobile
+// {
+//     String brand;
+//     int price;
+//     String network;
+//     static String name;
+
+//     static{
+//         name = "Phone";
+//     }
+
+//     public Mobile(){
+//         brand = "";
+//         price = 200;
+//     }
+
+//     public void show()
+//     {
+//         System.out.println();
+//     }
+// }
+class Human
 {
-    String brand;
-    int price;
-    String network;
-    static String name;
+    private int age;
+    private String name;
 
-    static{
-        name = "Phone";
+    public int getAge(){
+        return age;
     }
 
-    public Mobile(){
-        brand = "";
-        price = 200;
+    public void setAge(int a){
+        age = a;
     }
 
-    public void show()
-    {
-        System.out.println();
+    public String getName(){
+        return name;
+    }
+
+    public void setName(String n2){
+        name = n;
     }
 }
 
@@ -69,10 +90,14 @@ public class Demo
 {
     public static void main(String a[])
     {
-        Mobile obj = new Mobile();
-        obj.brand = "Apple";
-        obj.price = 1500;
-        obj.name = "SmartPhone";
+        Human obj = new Human();
+        obj.age = 11;
+        obj.name = "Navin";
+
+        // Mobile obj = new Mobile();
+        // obj.brand = "Apple";
+        // obj.price = 1500;
+        // obj.name = "SmartPhone";
 
         // Mobile obj1 = new Mobile();
         // obj.brand = "Samsung";

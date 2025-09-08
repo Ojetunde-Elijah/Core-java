@@ -91,11 +91,24 @@ public class SinglyLinkedList{
     public ListNode deleteAnywhere(){
         if(head == null){
             return null;
+        }else if(position == 1 && head != null){
+            ListNode temp = head;
+            head = head.next;
+            temp.next = null;
+            return temp;
+        }else if{
+            ListNode previous = head;
+            int count = 1;
+            while(count < position -1){
+                previous = previous.next;
+                count++
+            }
+            ListNode current = previous.next;
+            previous.next = current.next;
+            current = null
         }
-        ListNode temp = head;
-        head = head.next;
-        temp.next = null;
-        return temp;
+
+        
         
     }
     public static void main(String args[]){
